@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Sense | Premium Design & Build Services in Kampala</title>
+    <meta name="description" content="Transform your spaces with Kampala's premier design and build firm. Specializing in interior design, landscaping, and exterior finishing for residential and commercial properties.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(30, 60, 50, 0.9) 0%, rgba(60, 80, 60, 0.8) 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        .floating-btn {
+            animation: pulse 2s infinite;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .animate-wiggle {
+            animation: wiggle 1s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(30, 60, 50, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(30, 60, 50, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(30, 60, 50, 0);
+            }
+        }
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/256785857727" class="fixed bottom-6 right-6 bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 hover:bg-green-700 transition-all shadow-lg" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Floating CTA Button -->
+    <a href="#contact" class="floating-btn fixed bottom-24 right-6 bg-emerald-800 text-white px-6 py-3 rounded-full flex items-center justify-center z-50 hover:bg-emerald-900 transition-all shadow-lg font-medium">
+        Start Your Project <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-40 transition-all duration-300">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-emerald-800 flex items-center">
+                        <i class="fas fa-pencil-ruler mr-2 hover:animate-pulse"></i> Design Sense
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-emerald-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl hover:rotate-90 transition-transform duration-300"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-emerald-800 hover:text-emerald-600 font-medium">Home</a>
+                    <a href="#about" class="text-stone-700 hover:text-emerald-600 font-medium">About</a>
+                    <a href="#services" class="text-stone-700 hover:text-emerald-600 font-medium">Services</a>
+                    <a href="#portfolio" class="text-stone-700 hover:text-emerald-600 font-medium">Portfolio</a>
+                    <a href="#testimonials" class="text-stone-700 hover:text-emerald-600 font-medium">Testimonials</a>
+                    <a href="#contact" class="bg-emerald-800 text-white px-4 py-2 rounded-md hover:bg-emerald-700 font-medium transition-all">Contact Us</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 bg-white rounded-lg shadow-lg p-4">
+                <a href="#home" class="block py-2 text-emerald-800 font-medium">Home</a>
+                <a href="#about" class="block py-2 text-stone-700 hover:text-emerald-600">About</a>
+                <a href="#services" class="block py-2 text-stone-700 hover:text-emerald-600">Services</a>
+                <a href="#portfolio" class="block py-2 text-stone-700 hover:text-emerald-600">Portfolio</a>
+                <a href="#testimonials" class="block py-2 text-stone-700 hover:text-emerald-600">Testimonials</a>
+                <a href="#contact" class="block mt-2 bg-emerald-800 text-white px-4 py-2 rounded-md text-center hover:bg-emerald-700">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern designed living space" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Beautifully Designed Spaces <br><span class="text-emerald-300">Inside and Out</span></h1>
+            <p class="text-xl text-white mb-10 max-w-3xl mx-auto">Transforming residential and commercial properties in Kampala with premium design and build solutions that blend aesthetics with functionality.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-4 rounded-md font-medium transition-all">Request Free Consultation</a>
+                <a href="#services" class="bg-white hover:bg-stone-100 text-emerald-800 px-8 py-4 rounded-md font-medium transition-all">Explore Services</a>
+            </div>
+            
+            <div class="mt-16 flex flex-wrap justify-center gap-6">
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-6 py-3 flex items-center">
+                    <i class="fas fa-award text-emerald-300 mr-2 text-xl"></i>
+                    <span class="text-white font-medium">10+ Years Experience</span>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-6 py-3 flex items-center">
+                    <i class="fas fa-leaf text-emerald-300 mr-2 text-xl"></i>
+                    <span class="text-white font-medium">Sustainable Materials</span>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-6 py-3 flex items-center">
+                    <i class="fas fa-check-circle text-emerald-300 mr-2 text-xl"></i>
+                    <span class="text-white font-medium">Design-Build Certified</span>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-emerald-800 mb-6">Crafting Spaces That Inspire</h2>
+                    <p class="text-stone-600 mb-6">Founded in Kampala, Design Sense has been at the forefront of innovative design and construction solutions for over a decade. Our team of passionate designers, architects, and builders work collaboratively to bring your vision to life.</p>
+                    <p class="text-stone-600 mb-8">We believe that great design should be accessible, functional, and sustainable. Our approach combines local craftsmanship with global design trends to create spaces that stand the test of time.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-lightbulb text-emerald-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800">Innovative Design Solutions</h4>
+                                <p class="text-stone-600">Creative approaches tailored to your unique needs and preferences.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-hands-helping text-emerald-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800">End-to-End Service</h4>
+                                <p class="text-stone-600">From concept to completion, we handle every detail of your project.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-globe-africa text-emerald-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800">Local Expertise</h4>
+                                <p class="text-stone-600">Deep understanding of Kampala's climate, materials, and architectural styles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-lg overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Design team working" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md mt-8">
+                            <img src="https://images.unsplash.com/photo-1600566752227-17c8c9df7399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Completed interior design project" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Landscape design" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md mt-8">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Exterior finishing" class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-stone-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-emerald-600 font-medium">OUR SERVICES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-emerald-800 mt-2 mb-4">Comprehensive Design & Build Solutions</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">From initial concept to final execution, we provide complete design and construction services tailored to your vision and budget.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Interior Design" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-couch text-emerald-700 text-xl hover:animate-bounce"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-3">Interior Design</h3>
+                        <p class="text-stone-600 mb-6">Transform your residential or commercial interiors with our bespoke design solutions that combine aesthetics with functionality.</p>
+                        <ul class="space-y-2 text-stone-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Space planning & optimization
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Material & finish selection
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Custom furniture design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Lighting design
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Landscape Design" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-tree text-emerald-700 text-xl hover:animate-wiggle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-3">Landscape Design</h3>
+                        <p class="text-stone-600 mb-6">Create outdoor spaces that harmonize with your property's architecture while providing functional, beautiful environments.</p>
+                        <ul class="space-y-2 text-stone-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Garden & yard design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Hardscaping & paving
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Irrigation systems
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Outdoor lighting
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Exterior Finishing" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-home text-emerald-700 text-xl hover:animate-pulse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-3">Exterior Finishing</h3>
+                        <p class="text-stone-600 mb-6">Enhance your property's curb appeal and durability with our premium exterior finishing solutions.</p>
+                        <ul class="space-y-2 text-stone-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Facade design & cladding
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Patio & deck construction
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Boundary walls & fencing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-emerald-600 mr-2"></i> Driveway paving
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-block bg-emerald-800 hover:bg-emerald-700 text-white px-8 py-4 rounded-md font-medium transition-all">
+                    Get a Custom Quote <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-emerald-600 font-medium">OUR WORK</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-emerald-800 mt-2 mb-4">Recent Projects</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">Explore our portfolio of completed projects showcasing our design expertise and craftsmanship.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600566752227-17c8c9df7399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern Apartment Interior" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                        <h3 class="text-xl font-bold text-white mb-2">Kololo Residence</h3>
+                        <p class="text-stone-200 mb-3">Complete interior redesign of a 4-bedroom apartment in Kololo</p>
+                        <span class="inline-block bg-emerald-700 text-white px-3 py-1 rounded-full text-sm">Interior Design</span>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Commercial Building Exterior" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                        <h3 class="text-xl font-bold text-white mb-2">Nakasero Office Complex</h3>
+                        <p class="text-stone-200 mb-3">Exterior finishing and facade redesign for commercial property</p>
+                        <span class="inline-block bg-emerald-700 text-white px-3 py-1 rounded-full text-sm">Exterior Finishing</span>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Residential Garden" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                        <h3 class="text-xl font-bold text-white mb-2">Buziga Garden Oasis</h3>
+                        <p class="text-stone-200 mb-3">Complete landscape design for private residence</p>
+                        <span class="inline-block bg-emerald-700 text-white px-3 py-1 rounded-full text-sm">Landscape Design</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#" class="inline-flex items-center text-emerald-800 font-medium hover:text-emerald-700">
+                    View Full Portfolio <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-stone-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-emerald-600 font-medium">CLIENT FEEDBACK</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-emerald-800 mt-2 mb-4">What Our Clients Say</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">Hear from homeowners and business owners who have transformed their spaces with our design and build services.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-800">Sarah K.</h4>
+                            <span class="text-stone-500 text-sm">Homeowner, Kololo</span>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 mb-6">"Design Sense completely transformed our outdated home into a modern sanctuary. Their attention to detail and ability to understand our lifestyle needs was exceptional. The project was completed on time and within budget."</p>
+                    <div class="flex text-amber-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James M." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-800">James M.</h4>
+                            <span class="text-stone-500 text-sm">Property Developer, Nakasero</span>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 mb-6">"We've worked with several design firms, but Design Sense stands out for their professionalism and creative solutions. They delivered an outstanding exterior finish for our commercial property that has received numerous compliments."</p>
+                    <div class="flex text-amber-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Patricia N." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-800">Patricia N.</h4>
+                            <span class="text-stone-500 text-sm">Restaurant Owner, Bugolobi</span>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 mb-6">"The landscape design team created an incredible outdoor dining space that has become our restaurant's main attraction. They understood our vision perfectly and executed it with precision. Our customers love the ambiance!"</p>
+                    <div class="flex text-amber-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-emerald-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Space?</h2>
+            <p class="text-emerald-100 max-w-2xl mx-auto mb-8">Whether you're planning a home renovation, commercial redesign, or landscape project, our team is ready to bring your vision to life.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+256XXXXXXXXX" class="bg-white hover:bg-stone-100 text-emerald-800 px-8 py-4 rounded-md font-medium transition-all">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Us Now
+                </a>
+                <a href="#contact" class="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 rounded-md font-medium transition-all">
+                    Send a Message <i class="fas fa-envelope ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-emerald-800 mb-6">Get In Touch</h2>
+                    <p class="text-stone-600 mb-8">Have a project in mind or questions about our services? Fill out the form and our team will get back to you within 24 hours.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-emerald-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800">Our Location</h4>
+                                <p class="text-stone-600">Plot 24, Yusuf Lule Road<br>Kampala, Uganda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-emerald-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800">Email Us</h4>
+                                <p class="text-stone-600">info@designsense.ug<br>projects@designsense.ug</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-emerald-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800">Call Us</h4>
+                                <p class="text-stone-600">+256 700 123456<br>+256 750 987654</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h4 class="font-bold text-stone-800 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-stone-100 hover:bg-stone-200 w-10 h-10 rounded-full flex items-center justify-center text-stone-700">
+                                <i class="fab fa-facebook-f hover:scale-125 transition-transform"></i>
+                            </a>
+                            <a href="#" class="bg-stone-100 hover:bg-stone-200 w-10 h-10 rounded-full flex items-center justify-center text-stone-700">
+                                <i class="fab fa-instagram hover:scale-125 transition-transform"></i>
+                            </a>
+                            <a href="#" class="bg-stone-100 hover:bg-stone-200 w-10 h-10 rounded-full flex items-center justify-center text-stone-700">
+                                <i class="fab fa-linkedin-in hover:scale-125 transition-transform"></i>
+                            </a>
+                            <a href="#" class="bg-stone-100 hover:bg-stone-200 w-10 h-10 rounded-full flex items-center justify-center text-stone-700">
+                                <i class="fab fa-pinterest-p hover:scale-125 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form class="bg-stone-50 p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-stone-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="Your name">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-stone-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="Your email">
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-stone-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="Your phone number">
+                        </div>
+                        <div class="mb-6">
+                            <label for="service" class="block text-stone-700 font-medium mb-2">Service Interested In</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="interior">Interior Design</option>
+                                <option value="landscape">Landscape Design</option>
+                                <option value="exterior">Exterior Finishing</option>
+                                <option value="full">Full Design-Build</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-stone-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-emerald-800 hover:bg-emerald-700 text-white px-6 py-4 rounded-lg font-medium transition-all">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7536223157963!2d32.581313714753894!3d0.3132209997999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb93e0005e07%3A0x8a2d6e5a5e5e5e5e!2sYusuf%20Lule%20Road%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white flex items-center mb-6">
+                        <i class="fas fa-pencil-ruler mr-2 text-emerald-500"></i> Design Sense
+                    </a>
+                    <p class="text-stone-400 mb-4">Transforming spaces in Kampala with innovative design and quality construction since 2010.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-stone-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-stone-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-stone-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-stone-400 hover:text-white">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-stone-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-stone-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-stone-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-stone-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-stone-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-stone-400 hover:text-white transition-colors">Interior Design</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-white transition-colors">Landscape Design</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-white transition-colors">Exterior Finishing</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-white transition-colors">Space Planning</a></li>
+                        <li><a href="#" class="text-stone-400 hover:text-white transition-colors">Custom Furniture</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-stone-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-emerald-500 mt-1 mr-3 hover:animate-bounce"></i>
+                            <span>kyaliwajjala-kira road,<br>Kampala, Uganda</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-emerald-500 mr-3 hover:animate-pulse"></i>
+                            <span>+256 785 857727</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-emerald-500 mr-3 hover:animate-wiggle"></i>
+                            <span>info@designsense.ug</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-stone-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-stone-500 text-sm mb-4 md:mb-0">© 2025 Design Sense. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-stone-500 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-stone-500 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-stone-500 hover:text-white text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Sticky navbar on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission (example)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to your server
+                // For demonstration, we'll just show an alert
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
